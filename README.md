@@ -1,0 +1,1 @@
+iex ProjetoLP.main
