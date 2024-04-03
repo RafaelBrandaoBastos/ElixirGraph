@@ -3,3 +3,4 @@ iex ProjetoLP.main
 elixir
 mix deps.get
 mix run --no-halt
+hot code reloading
