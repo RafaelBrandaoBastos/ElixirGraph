@@ -1,3 +1,4 @@
 iex ProjetoLP.main
-elixirc
+<p>elixirc</p>
 elixir
+mix run --no-halt
