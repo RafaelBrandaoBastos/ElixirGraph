@@ -1,6 +1,6 @@
 defmodule Exporter do
   def print_to_dot(graph, filename) do
-    full_path = "C:/Users/rafae/OneDrive/Área de Trabalho/ElixirGraph/#{filename}"
+    full_path = "#{filename}"
     File.write!(full_path, generate_dot_content(graph))
     IO.puts("Arquivo #{full_path} gerado com sucesso!")
   end
