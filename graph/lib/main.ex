@@ -3,6 +3,11 @@ defmodule Main do
   import Graph
   import Exporter
 
+  # Definição da struct Vertex dentro do módulo Main
+  defmodule Vertex do
+    defstruct nome: nil, id: nil, infected: nil
+  end
+
   def run do
     # Cria um novo grafo vazio
     graph = %Graph{}
@@ -17,12 +22,13 @@ defmodule Main do
   # Função para adicionar vértices ao grafo recursivamente
   # Caso base: quando n é igual a 1
   def add_vertices(graph, 1) do
-    add_vertex(graph, Integer.to_string(1))
+    vertex = %Vertex{id: 1}
+    add_vertex(graph, vertex)
   end
 
   # Caso recursivo: quando n é maior que 1
   def add_vertices(graph, n) when n > 0 do
-    updated_graph = add_vertex(graph, Integer.to_string(n))
+    updated_graph = add_vertex(graph, %Vertex{id: n})
     add_vertices(updated_graph, n - 1)
   end
 
@@ -30,10 +36,8 @@ defmodule Main do
   # Caso base: quando n é igual a 1
   def add_edges(graph, 1, i) do
     random = generate_random(1, i)
-
-    randomS = Integer.to_string(random)
-    updated_graph = add_edge(graph, "1", "2")
-    add_edge(updated_graph, "1", "#{randomS}")
+    updated_graph = add_edge(graph, 1, 2)
+    add_edge(updated_graph, 1, "#{random}")
   end
 
   # Gera numero randomico
@@ -52,17 +56,17 @@ defmodule Main do
     if n == i do
       prev = n - 1
       random = generate_random(n, i)
-      updated_graph = add_edge(graph, Integer.to_string(n), Integer.to_string(prev))
-      updated_graph2 = add_edge(updated_graph, Integer.to_string(n), Integer.to_string(random))
+      updated_graph = add_edge(graph, n, Integer.to_string(prev))
+      updated_graph2 = add_edge(updated_graph, n, Integer.to_string(random))
       add_edges(updated_graph2, n - 1, i)
     else
       prev = n - 1
       next = n + 1
       random = generate_random(n, i)
 
-      updated_graph = add_edge(graph, Integer.to_string(n), Integer.to_string(prev))
-      updated_graph2 = add_edge(updated_graph, Integer.to_string(n), Integer.to_string(next))
-      updated_graph3 = add_edge(updated_graph2, Integer.to_string(n), Integer.to_string(random))
+      updated_graph = add_edge(graph, n, Integer.to_string(prev))
+      updated_graph2 = add_edge(updated_graph, n, Integer.to_string(next))
+      updated_graph3 = add_edge(updated_graph2, n, Integer.to_string(random))
       add_edges(updated_graph3, n - 1, i)
     end
   end

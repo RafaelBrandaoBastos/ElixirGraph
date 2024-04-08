@@ -2,10 +2,12 @@ defmodule Graph do
   defstruct vertices: %{}, edges: %{}
 
   def add_vertex(graph, vertex) do
-    %{graph | vertices: Map.put(graph.vertices, vertex, true)}
+    updated_vertices = Map.put(graph.vertices, vertex.id, vertex)
+    %{graph | vertices: updated_vertices}
   end
 
   def add_edge(graph, from, to) do
+    IO.puts("Add edge #{from} to #{to}")
     edges = Map.update(graph.edges, from, [to], fn existing_edges -> [to | existing_edges] end)
     %{graph | edges: edges}
   end
@@ -15,19 +17,19 @@ defmodule Graph do
   end
 
   defp traverse_vertices(%{} = vertices) do
-    Enum.each(vertices, fn {vertex, _} ->
-      IO.puts("Visiting vertex: #{vertex}")
+    Enum.each(vertices, fn {vertex_id, _} ->
+      IO.puts("Visiting vertex: #{vertex_id}")
     end)
   end
 
   def traverse_neighbors(graph) do
-    Enum.each(graph.vertices, fn {vertex, _} ->
-      neighbors = get_neighbors(graph, vertex)
-      IO.puts("Neighbors of vertex #{vertex}: #{inspect(neighbors)}")
+    Enum.each(graph.vertices, fn {vertex_id, _} ->
+      neighbors = get_neighbors(graph, vertex_id)
+      IO.puts("Neighbors of vertex #{vertex_id}: #{inspect(neighbors)}")
     end)
   end
 
-  defp get_neighbors(%{edges: edges}, vertex) do
-    Map.get(edges, vertex, [])
+  defp get_neighbors(%{edges: edges}, vertex_id) do
+    Map.get(edges, vertex_id, [])
   end
 end
