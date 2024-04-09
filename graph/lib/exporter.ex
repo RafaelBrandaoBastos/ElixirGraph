@@ -1,4 +1,6 @@
 defmodule Exporter do
+  import GraphMethods
+
   def print_to_dot(graph, filename) do
     full_path = "#{filename}"
     File.write!(full_path, generate_dot_content(graph))
@@ -7,17 +9,20 @@ defmodule Exporter do
 
   defp generate_dot_content(graph) do
     nodes =
-      Enum.map(graph.vertices, fn {vertex, _} ->
-        IO.puts("Visiting vertex: #{vertex}")
-        neighbors = get_neighbors(graph, vertex)
+      Enum.map(graph.vertices, fn {vertex_id, vertex} ->
+        vertex_infected = Map.get(vertex, :infected, false)
+        fillcolor = if vertex_infected, do: "red", else: "lightblue"
+        # IO.puts("Visiting vertex: #{vertex}")
+        neighbors = get_neighbors(graph, vertex_id)
+        vertex_id_str = to_string(vertex_id)
 
         edges =
           Enum.map(neighbors, fn neighbor ->
-            "#{vertex} -> #{neighbor}[penwidth=4];"
+            "#{vertex_id_str} -> #{neighbor}[penwidth=4];"
           end)
 
         [
-          "#{vertex} [label=\"#{vertex}\", fillcolor=\"lightblue\", style=\"filled\", shape=\"circle\"];",
+          "#{vertex_id_str} [label=\"#{vertex_id_str}\", fillcolor=\"#{fillcolor}\", style=\"filled\", shape=\"circle\"];",
           edges
         ]
       end)
