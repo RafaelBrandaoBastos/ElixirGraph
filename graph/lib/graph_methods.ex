@@ -8,7 +8,7 @@ defmodule GraphMethods do
   end
 
   def add_edge(graph, from, to) do
-    # IO.puts("Add edge #{from} to #{to}")
+    IO.puts("Add edge #{from} to #{to}")
     edges = Map.update(graph.edges, from, [to], fn existing_edges -> [to | existing_edges] end)
     %{graph | edges: edges}
   end

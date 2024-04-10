@@ -17,7 +17,7 @@ defmodule GraphCreator do
   # Caso base: quando n é igual a 1
   def add_edges(graph, 1, i) do
     random = generate_random(1, i)
-    updated_graph = add_edge(graph, 1, 2)
+    updated_graph = add_edge(graph, 1, "2")
     add_edge(updated_graph, 1, "#{random}")
   end
 

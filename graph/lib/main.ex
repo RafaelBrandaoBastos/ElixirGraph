@@ -1,6 +1,6 @@
 # Definição da struct Vertex dentro do módulo Main
 defmodule Vertex do
-  defstruct nome: nil, id: nil, infected: false
+  defstruct id: nil, infected: false
 end
 
 defmodule Main do
@@ -26,7 +26,9 @@ defmodule Main do
     graphsize = 10
     graph_with_vertices = add_vertices(graph, graphsize)
     graph_with_edges = add_edges(graph_with_vertices, graphsize, graphsize)
+    Exporter.print_to_dot(graph_with_edges, "graph.dot")
     graph_with_infected = create_infection(graph_with_edges, graphsize)
-    traverse_neighbors2(graph_with_infected, graphsize)
+    ultimo = traverse_neighbors2(graph_with_infected, graphsize)
+    traverse(ultimo)
   end
 end

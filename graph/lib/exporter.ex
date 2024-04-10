@@ -18,7 +18,11 @@ defmodule Exporter do
 
         edges =
           Enum.map(neighbors, fn neighbor ->
-            "#{vertex_id_str} -> #{neighbor}[penwidth=4];"
+            if vertex_infected == true do
+              "#{vertex_id_str} -> #{neighbor}[penwidth=4][color=red];"
+            else
+              "#{vertex_id_str} -> #{neighbor}[penwidth=4][color=black];"
+            end
           end)
 
         [
