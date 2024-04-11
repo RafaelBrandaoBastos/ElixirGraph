@@ -1,13 +1,13 @@
 digraph G {
 1 [label="1", fillcolor="red", style="filled", shape="circle"];
-  1 -> 10[penwidth=4][color=red];
+  1 -> 5[penwidth=4][color=red];
   1 -> 2[penwidth=4][color=red];
   2 [label="2", fillcolor="red", style="filled", shape="circle"];
-  2 -> 6[penwidth=4][color=red];
+  2 -> 4[penwidth=4][color=red];
   2 -> 3[penwidth=4][color=red];
   2 -> 1[penwidth=4][color=red];
   3 [label="3", fillcolor="red", style="filled", shape="circle"];
-  3 -> 10[penwidth=4][color=red];
+  3 -> 9[penwidth=4][color=red];
   3 -> 4[penwidth=4][color=red];
   3 -> 2[penwidth=4][color=red];
   4 [label="4", fillcolor="red", style="filled", shape="circle"];
@@ -19,11 +19,11 @@ digraph G {
   5 -> 6[penwidth=4][color=red];
   5 -> 4[penwidth=4][color=red];
   6 [label="6", fillcolor="red", style="filled", shape="circle"];
-  6 -> 4[penwidth=4][color=red];
+  6 -> 3[penwidth=4][color=red];
   6 -> 7[penwidth=4][color=red];
   6 -> 5[penwidth=4][color=red];
   7 [label="7", fillcolor="red", style="filled", shape="circle"];
-  7 -> 4[penwidth=4][color=red];
+  7 -> 2[penwidth=4][color=red];
   7 -> 8[penwidth=4][color=red];
   7 -> 6[penwidth=4][color=red];
   8 [label="8", fillcolor="red", style="filled", shape="circle"];
@@ -35,6 +35,6 @@ digraph G {
   9 -> 10[penwidth=4][color=red];
   9 -> 8[penwidth=4][color=red];
   10 [label="10", fillcolor="red", style="filled", shape="circle"];
-  10 -> 2[penwidth=4][color=red];
+  10 -> 3[penwidth=4][color=red];
   10 -> 9[penwidth=4][color=red];
 }
