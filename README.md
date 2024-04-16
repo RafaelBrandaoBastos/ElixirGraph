@@ -14,7 +14,7 @@ Graphviz is open source graph visualization software. Graph visualization is a w
 
 ## Using IEX
 Elixir's interactive shell, known as IEx, is a powerful tool that allows Elixir developers to quickly test and evaluate code snippets, define and test functions, and interact with their Elixir applications in real time.
-```http
+```
 - iex -S mix
 ```
 
