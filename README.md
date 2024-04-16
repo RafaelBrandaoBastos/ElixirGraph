@@ -13,8 +13,12 @@ Graphviz is open source graph visualization software. Graph visualization is a w
 - Extension: https://marketplace.visualstudio.com/items?itemName=EFanZh.graphviz-preview
 
 # Graph manipulation
-## Graph Creator
+
+## 1 Using iex
+Elixir's interactive shell, known as IEx, is a powerful tool that allows Elixir developers to quickly test and evaluate code snippets, define and test functions, and interact with their Elixir applications in real time.
+
+## 2 Graph Creator
 Main.graph_generator  
-## Infection Simulator
+## 2.2 Infection Simulator
 Main.graph_generator  
 
