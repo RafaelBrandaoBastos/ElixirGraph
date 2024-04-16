@@ -23,7 +23,7 @@ In discrete mathematics, and more specifically in graph theory, a graph is a str
 ```
 Main.graph_generator
 ```
-###![image](https://github.com/RafaelBrandaoBastos/ElixirGraph/assets/72472711/89783ab8-178a-4faf-ba9a-915ee80e55cb)
+![image](https://github.com/RafaelBrandaoBastos/ElixirGraph/assets/72472711/89783ab8-178a-4faf-ba9a-915ee80e55cb)
 
 
 ## Infection Simulator
@@ -31,6 +31,6 @@ The module creates a new graph and proceeds by infecting the nodes recursively
 ```
 Main.start_infection
 ```
-###![image](https://github.com/RafaelBrandaoBastos/ElixirGraph/assets/72472711/060d4cea-2346-4a39-bc7a-ff6824e9746e)
+![image](https://github.com/RafaelBrandaoBastos/ElixirGraph/assets/72472711/060d4cea-2346-4a39-bc7a-ff6824e9746e)
 
 
