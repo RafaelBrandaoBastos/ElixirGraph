@@ -12,12 +12,14 @@ Graphviz is open source graph visualization software. Graph visualization is a w
 
 # Graph manipulation
 
-## Using iex
+## Using IEX
 Elixir's interactive shell, known as IEx, is a powerful tool that allows Elixir developers to quickly test and evaluate code snippets, define and test functions, and interact with their Elixir applications in real time.
 - 1° Command: iex -S mix
 
-## 2 Graph Creator
-Main.graph_generator  
-## 2.2 Infection Simulator
-Main.graph_generator  
+## Creating a Graph
+In discrete mathematics, and more specifically in graph theory, a graph is a structure amounting to a set of objects in which some pairs of the objects are in some sense "related". The objects are represented by abstractions called vertices (also called nodes or points) and each of the related pairs of vertices is called an edge (also called link or line).
+- 2° Command: Main.graph_generator 
+
+## Infection Simulator
+- 3° Command:Main.infection_creator
 
