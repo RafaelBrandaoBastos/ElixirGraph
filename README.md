@@ -19,10 +19,12 @@ Elixir's interactive shell, known as IEx, is a powerful tool that allows Elixir 
 ## Creating a Graph
 In discrete mathematics, and more specifically in graph theory, a graph is a structure amounting to a set of objects in which some pairs of the objects are in some sense "related". The objects are represented by abstractions called vertices (also called nodes or points) and each of the related pairs of vertices is called an edge (also called link or line).
 - Main.graph_generator
-![image](https://github.com/RafaelBrandaoBastos/ElixirGraph/assets/72472711/89783ab8-178a-4faf-ba9a-915ee80e55cb)
+###![image](https://github.com/RafaelBrandaoBastos/ElixirGraph/assets/72472711/89783ab8-178a-4faf-ba9a-915ee80e55cb)
 
 
 ## Infection Simulator
 The module creates a new graph and proceeds by infecting the nodes recursively
 - Main.start_infection
+###![image](https://github.com/RafaelBrandaoBastos/ElixirGraph/assets/72472711/060d4cea-2346-4a39-bc7a-ff6824e9746e)
+
 
