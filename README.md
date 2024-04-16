@@ -12,4 +12,9 @@ Graphviz is open source graph visualization software. Graph visualization is a w
 - Tool: https://graphviz.org/download/
 - Extension: https://marketplace.visualstudio.com/items?itemName=EFanZh.graphviz-preview
 
+# Graph manipulation
 ## Graph Creator
+Main.graph_generator  
+## Infection Simulator
+Main.graph_generator  
+
